@@ -1,0 +1,11 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html/
+    overwrite: true
+permissions:
+  - object: /var/www/html/
+    owner: webuser
+    group: webgroup
+    mode: 755
