@@ -4,8 +4,8 @@ files:
   - source: /
     destination: /var/www/html/
     overwrite: true
-permissions:
-  - object: /var/www/html/
-    owner: webuser
-    group: webgroup
-    mode: 755
+hooks:
+  AfterInstall:
+    - location: scripts/after_install.sh
+      timeout: 300
+      runas: root
